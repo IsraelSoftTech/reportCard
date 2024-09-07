@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Dashboard</h1>
+
+        <div class="buttons-container">
+            <button class="upload-button" data-subject="Chemistry">Upload Chemistry</button>
+            <button class="upload-button" data-subject="Physics">Upload Physics</button>
+            <button class="upload-button" data-subject="Maths">Upload Maths</button>
+            <button class="upload-button" data-subject="English">Upload English</button>
+            <button class="upload-button" data-subject="French">Upload French</button>
+        </div>
+
+        <div id="uploaded-files">
+            <h2>Your Uploaded Marks</h2>
+            <ul id="files-list">
+                <!-- Uploaded files will be listed here -->
+            </ul>
+        </div>
+
+        <!-- Modal for class selection -->
+        <div id="class-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Select Class</h2>
+                <label for="class-select">Class:</label>
+                <select id="class-select">
+                    <option value="Form 1 A">Form 1 A</option>
+                    <option value="Form 1 B">Form 1 B</option>
+                    <option value="Form 1 C">Form 1 C</option>
+                    <option value="Form 2 A">Form 2 A</option>
+                    <option value="Form 2 B">Form 2 B</option>
+                    <option value="Form 2 C">Form 2 C</option>
+                </select>
+                <button id="continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="teacher.js"></script>
+</body>
+</html>

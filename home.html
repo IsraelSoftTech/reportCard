@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS to handle hidden form */
+        #signup-container {
+            display: none; /* Hide the signup form initially */
+        }
+        #login-container {
+            display: block; /* Show the login form initially */
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container" class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="account-type">Account Type:</label>
+            <select id="account-type" name="account-type" required>
+                <option value="Admin">Admin</option>
+                <option value="Teacher">Teacher</option>
+            </select>
+            
+            <button type="submit">Login</button>
+        </form>
+
+        <button id="toggle-signup">Create Account</button>
+    </div>
+
+    <div id="signup-container">
+        <h2>Create Account</h2>
+        <form id="signup-form">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="signup-username" required>
+            
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
+            
+            <label for="signup-account-type">Account Type:</label>
+            <select id="signup-account-type" name="signup-account-type" required>
+                <option value="Admin">Admin</option>
+                <option value="Teacher">Teacher</option>
+            </select>
+            
+            <button type="submit">Create Account</button>
+        </form>
+        <button id="back-to-login">Back to Login</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // JavaScript to toggle form visibility
+        document.getElementById('toggle-signup').addEventListener('click', () => {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('signup-container').style.display = 'block';
+        });
+
+        document.getElementById('back-to-login').addEventListener('click', () => {
+            document.getElementById('signup-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
